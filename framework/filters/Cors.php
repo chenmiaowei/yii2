@@ -9,6 +9,7 @@ namespace yii\filters;
 
 use Yii;
 use yii\base\ActionFilter;
+use yii\base\Exception;
 use yii\web\Request;
 use yii\web\Response;
 
@@ -154,6 +155,7 @@ class Cors extends ActionFilter
      * For each CORS headers create the specific response.
      * @param array $requestHeaders CORS headers we have detected
      * @return array CORS headers ready to be sent
+     * @throws Exception
      */
     public function prepareHeaders($requestHeaders)
     {
